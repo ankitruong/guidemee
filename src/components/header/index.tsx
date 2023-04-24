@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export const HeaderComponent = () => {
   return (
-    <header className={`container`}>
+    <header className={`container-fluid`}>
       <div className={`row align-items-center ${styles.header}`}>
         <div className='col-5'>
           <Image className={styles.logo} src="/guidemee/logo-Horizontal@2x.png" alt="" width={100} height={100} />
