@@ -35,3 +35,9 @@
 .button:active {
   color: inherit!important;
 }
+
+.flexGap {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}

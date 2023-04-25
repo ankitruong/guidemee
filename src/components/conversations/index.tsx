@@ -25,7 +25,7 @@ export const ConversationsComponent = () => {
     <section className={`container-fluid ${styles.background}`}>
       <div className="row h-100">
         <div className={`d-flex flex-column align-items-center justify-content-center`}>
-          <h3 className={styles.title}>Mentee nói gì về chúng tôi</h3>
+          <h3 className={styles.title}>What our members are saying</h3>
           <div className={`row align-items-center justify-content-center ${styles.flexGap}`}>
             {
               mentees.map((mentee,idx) =>{

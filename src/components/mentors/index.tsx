@@ -68,7 +68,7 @@ export const MentorsComponent = () => {
     <section id="findAMentor" className={`container-fluid ${styles.background}`}>
       <div className="row h-100">
         <div className={`d-flex flex-column align-items-center justify-content-center`}>
-          <h3 className={styles.title}>Khám phá những Mentor nổi bật</h3>
+          <h3 className={styles.title}>Meet our mentors</h3>
           <div className={`row align-items-center justify-content-center ${styles.flexGap}`}>
             {
               mentors.map((mentor,idx)=>{

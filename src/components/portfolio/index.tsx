@@ -2,24 +2,27 @@ import styles from './styles.module.css';
 
 const data = [
   {
+    id: "carrer-path",
     isReverse: false,
     backgroundColor: "#FFFFFF",
-    title:"Bước nhảy vọt sự nghiệp với những người cố vấn 1:1",
-    content: "Nếu bạn đang tìm kiếm lời khuyên, sự kết nối - Guidemee cho phép bạn tự do lên lịch phiên cố vấn 1:1 theo những cách mới thú vị và  trực tiếp với họ.",
+    title:"Leap 10x career growth with world-class mentors",
+    content: "If you’re looking for advice, jamming, or networking, Guidemee lets you freely schedule a 1:1 mentorship session in fun new ways and work with them directly.",
     img: "/guidemee/person.png"
   },
   {
+    id: "carrer-path-mid",
     isReverse: true,
     backgroundColor: "#FAFAFA",
-    title:"Khám phá Trung tâm nghề nghiệp",
-    content: "Dành thời gian để đánh giá cả bản thân và nhu cầu nghề nghiệp của bạn sẽ giúp bạn khám phá ra con đường sự nghiệp đúng đắn. Hơn 10,000 vị trí nghề nghiệp, hơn 300 nghành nghề khác nhau với các hướng phát triển đa dạng theo tiêu chuẩn và nghiên cứu từ những chuyên gia hàng đầu",
+    title:"Visit a career center",
+    content: "Taking the time to assess both yourself and your career needs will help you discover the right career path. More than 10,000 job position, more than 300 job categories with various career development orientation from industry experts.",
     img: "/guidemee/person-2.png"
   },
   {
+    id: "carrer-path-last",
     isReverse: false,
     backgroundColor:"#F4ECEE",
-    title:"Nâng cao uy tín hồ sơ và thành tích để tìm một công việc nhanh chóng",
-    content: "Guidemee cho phép bạn liệt kê mình là một tài năng trong cộng đồng và được các Mentor xác nhận - nâng cao thông tin tìm việc của bạn để được tuyển dụng nhanh chóng.",
+    title:"Boost your credentials to get hired fast",
+    content: "Out of a job, not out of touch. Guidemee lets you list yourself as a talent in the community and get vouched by mentors - boosting your credentials to get hired fast.",
     img: "/guidemee/person-3.png"
   },
 ];
@@ -30,7 +33,7 @@ export const PortfolioComponent = () => {
       {
         data.map((i,idx)=>{
           return (
-            <section key={idx} style={{backgroundColor:`${i.backgroundColor}`}} className={`container-fluid d-flex align-items-center justify-content-center ${styles.background}`}>
+            <section id={i.id} key={idx} style={{backgroundColor:`${i.backgroundColor}`}} className={`container-fluid d-flex align-items-center justify-content-center ${styles.background}`}>
               <div className={`row justify-content-around ${i.isReverse && 'flex-row-reverse'} ${styles.box}`}>
                 <div className={`col-6 ${styles.image}`}>
                     <img className='img img-fluid' src={i.img} alt=""/>

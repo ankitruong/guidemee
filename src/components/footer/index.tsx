@@ -15,7 +15,7 @@ export const FooterComponent = () => {
               </div>
               <div className="row mb-4">
                 <div className="col">
-                Guidemee là nền tảng kết nối Mentor - Mentee trên nhiều lĩnh vực hướng tới những cơ hội việc làm hàng đầu cho giới trẻ Việt Nam
+                Guidemee is a mentorship and expert platform that helps you accelerate your career in various fields.
                 </div>
               </div>
               <div className="row">
@@ -28,25 +28,25 @@ export const FooterComponent = () => {
               <div className="row">
                 <div className="col">
                   <p>Mentee</p>
-                  <p>Khoá học</p>
-                  <p>Khám phá nghề nghiệp</p>
-                  <p>Tìm kiếm Mentor</p>
+                  <p>Courses</p>
+                  <p>Career path</p>
+                  <p>Find a mentor</p>
                 </div>
                 <div className="col">
                   <p>Mentor</p>
-                  <p>Tuyển dụng</p>
-                  <p>Trở thành Mentor</p>
+                  <p>Hire talent</p>
+                  <p>Become a mentor</p>
                 </div>
                 <div className="col">
                   <p>Company</p>
-                  <p>Về chúng tôi</p>
-                  <p>Trung tâm trợ giúp</p>
-                  <p>Hợp tác</p>
+                  <p>About us</p>
+                  <p>Help center</p>
+                  <p>Partnerships</p>
                   <p>FAQ</p>
                 </div>
                 <div className="col">
                   <p>Legal</p>
-                  <p>Điều khoản sử dụng</p>
+                  <p>Terms of service</p>
                   <p>Privacy policy</p>
                 </div>
               </div>
