@@ -65,7 +65,7 @@ function starComponent(star: number) {
 
 export const MentorsComponent = () => {
   return (
-    <section className={`container-fluid ${styles.background}`}>
+    <section id="findAMentor" className={`container-fluid ${styles.background}`}>
       <div className="row h-100">
         <div className={`d-flex flex-column align-items-center justify-content-center`}>
           <h3 className={styles.title}>Khám phá những Mentor nổi bật</h3>

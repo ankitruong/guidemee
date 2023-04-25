@@ -22,7 +22,7 @@ const data3 = [
 ]
 export const FieldComponent = () => {
   return (
-    <section className={`container-fluid ${styles.background}`}>
+    <section id="courses" className={`container-fluid ${styles.background}`}>
       <div className={`row h-100 justify-content-center align-items-center`}>
         <div className={`col-12 text-center mx-auto`}>
           <h2 className={styles.title}>Tìm kiếm Mentor trong lĩnh vực mà bạn đang theo đuổi</h2>

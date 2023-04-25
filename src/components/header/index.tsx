@@ -1,5 +1,7 @@
-import styles from './styles.module.css';
+import Link from 'next/link'
 import Image from 'next/image'
+
+import styles from './styles.module.css';
 
 export const HeaderComponent = () => {
   return (
@@ -10,11 +12,31 @@ export const HeaderComponent = () => {
         </div>
         <div className='col-7'>
           <div className='d-flex justify-content-between align-items-center'>
-            <div>Courses</div>
-            <div>Career path</div>
-            <div>Find a mentor</div>
-            <div>Hire talent</div>
-            <div>Become a mentor</div>
+            <div>
+              <Link href="/#courses" className={styles.link} scroll={false}>
+                Courses
+              </Link>
+            </div>
+            <div>
+              <Link href="/#hashid" className={styles.link} scroll={false}>
+                Career path
+              </Link>
+            </div>
+            <div>
+              <Link href="/#findAMentor" className={styles.link} scroll={false}>
+                Find a mentor
+              </Link>
+            </div>
+            <div>
+              <Link href="/#hashid" className={styles.link} scroll={false}>
+                Hire talent
+              </Link>
+            </div>
+            <div>
+              <Link href="/#hashid" className={styles.link} scroll={false}>
+                Become a mentor
+              </Link>
+            </div>
           </div>
         </div>
       </div>
