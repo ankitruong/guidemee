@@ -1,4 +1,3 @@
-import { Component } from './component';
 import styles from './styles.module.css'; 
 
 const data = [
@@ -31,7 +30,17 @@ export const PortfolioComponent = () => {
       {
         data.map((i,idx)=>{
           return (
-            <Component item={i} idx={idx}/>
+            <section key={idx} style={{backgroundColor:`${i.backgroundColor}`}} className={`container-fluid d-flex align-items-center justify-content-center ${styles.background}`}>
+              <div className={`row justify-content-around ${i.isReverse && 'flex-row-reverse'} ${styles.box}`}>
+                <div className={`col-6 ${styles.image}`}>
+                    <img className='img img-fluid' src={i.img} alt=""/>
+                </div>
+                <div className={`col-5 d-flex flex-column align-items-center justify-content-center`}>
+                  <h3 className={`${styles.title}`}>{i.title}</h3>
+                  <p className={`${styles.content}`}>{i.content}</p>
+                </div>
+              </div>
+            </section>
           );
         })
       }

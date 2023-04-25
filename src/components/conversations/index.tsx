@@ -30,7 +30,7 @@ export const ConversationsComponent = () => {
             {
               mentees.map((mentee,idx) =>{
                 return (
-                  <div className={`d-flex flex-column ${styles.box}`}>
+                  <div key={idx} className={`d-flex flex-column ${styles.box}`}>
                     <div className={styles.image}>
                       <img className='img img-fluid rounded-circle' src={mentee.avatar} alt=""/>
                     </div>
