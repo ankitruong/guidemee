@@ -47,7 +47,7 @@ export const ConversationsComponent = () => {
             }
           </div>
           <div>
-            <button type="button" className={`btn ${styles.button}`}>Tìm kiếm Mentor</button>
+            <button type="button" className={`btn ${styles.button}`}>Find a Mentor</button>
           </div>
         </div>
       </div>
