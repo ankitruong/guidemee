@@ -33,7 +33,7 @@ export const PortfolioComponent = () => {
       {
         data.map((i,idx)=>{
           return (
-            <section id={i.id} key={idx} style={{backgroundColor:`${i.backgroundColor}`}} className={`container-fluid d-flex align-items-center justify-content-center ${styles.background}`}>
+            <div id={i.id} key={idx} style={{backgroundColor:`${i.backgroundColor}`}} className={`container-fluid d-flex align-items-center justify-content-center ${styles.background}`}>
               <div className={`row justify-content-around ${i.isReverse && 'flex-row-reverse'} ${styles.box}`}>
                 <div className={`col-6 ${styles.image}`}>
                     <img className='img img-fluid' src={i.img} alt=""/>
@@ -43,7 +43,7 @@ export const PortfolioComponent = () => {
                   <p className={`${styles.content}`}>{i.content}</p>
                 </div>
               </div>
-            </section>
+            </div>
           );
         })
       }

@@ -1,0 +1,22 @@
+.background {
+  width: 100%;
+}
+
+.right p {
+  font-style: normal;
+  font-weight: 500;
+  margin: 0;
+}
+
+.right p:first-child {
+  opacity: 0.5;
+  font-weight: 400;
+}
+
+.space10 {
+  height: 10px;
+}
+
+.space20 {
+  height: 20px;
+}

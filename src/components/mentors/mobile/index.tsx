@@ -24,7 +24,7 @@ const mentors = [
   {
     avatar:"/guidemee/mentor-2.png",
     name:"Nguyen Huu Minh",
-    description:"Full-Tuition Scholarship, Harvard",
+    description:"Full-Tuition Scholarship , Harvard",
     starNumber: 4,
     numberVote: "1.6k"
   },
@@ -65,7 +65,7 @@ function starComponent(star: number) {
 
 export const MentorsComponent = () => {
   return (
-    <section id="findAMentor" className={`container-fluid ${styles.background}`}>
+    <div id="findAMentor" className={`container-fluid ${styles.background} py-4`}>
       <div className="row h-100">
         <div className={`d-flex flex-column align-items-center justify-content-center`}>
           <h3 className={styles.title}>Meet our mentors</h3>
@@ -75,9 +75,11 @@ export const MentorsComponent = () => {
                 return (
                   <div key={idx} className={`card ${styles.box}`}>
                     <img src={mentor.avatar} className="card-img-top" alt="" />
-                    <div className="card-body">
-                      <h5 className={`card-title ${styles.name}`}>{mentor.name}</h5>
-                      <p className={`card-title ${styles.description}`}>{mentor.description}</p>
+                    <div className="card-body p-1">
+                      <div className={styles.content}>
+                        <h5 className={`card-title ${styles.name} mb-0`}>{mentor.name}</h5>
+                        <p className={`card-title ${styles.description}`}>{mentor.description}</p>
+                      </div>
                       <div>
                         {...starComponent(mentor.starNumber)}
                         <span className={styles.starNumber}>
@@ -92,6 +94,6 @@ export const MentorsComponent = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }

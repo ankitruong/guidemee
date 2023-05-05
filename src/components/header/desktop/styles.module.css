@@ -20,3 +20,23 @@
   background-color: white;
   z-index: 99999;
 }
+
+.dropdown button {
+  background: none;
+  border: none;
+}
+.dropdown button::after {
+  content: none!important;
+}
+.dropdown button:hover {
+  background-color: inherit!important;
+}
+
+.flag {
+  width: 24px;
+  height: 24px;
+}
+
+.dropdownMenu {
+  min-width: 0;
+}

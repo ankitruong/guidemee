@@ -1,0 +1,123 @@
+.background {
+  background-color: #FCF3EC;
+}
+
+.content {
+  min-height: 62px;
+}
+
+.box{
+  width: 110px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.08);
+  border-radius: 20px 0px;
+}
+
+.box h5 {
+  font-weight: 600;
+  font-size: 9px;
+  margin-bottom: 5px;
+}
+
+.box p:nth-child(2) {
+  font-weight: 600;
+  font-size: 7px;
+  margin-bottom: 3px;
+  line-height: 8px;
+  font-weight: 500;
+}
+
+.box p:nth-child(3) {
+  font-size: 6px;
+  margin: 0;
+}
+
+.box .cardPrice {
+  font-weight: 600;
+  font-size: 6px;
+}
+
+.box .button {
+  padding: 0 2px;
+  font-weight: 500;
+  font-size: 6px;
+  background: #fff!important;
+  color: #000;
+  border: 1px solid #FF2359;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 23px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 16px;
+}
+
+.description {
+  color: #58585D;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.image{
+  /* width: 56px; */
+  /* min-height: 56px; */
+  /* margin-bottom: 20px; */
+}
+
+.flexGap {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.introduce{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.name{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  margin: 0;
+}
+
+.role{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  opacity: 0.5;
+}
+
+.button {
+  outline: none !important;;
+  background: #FED1DC!important;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.08);
+  border-radius: 30px 0px 30px 30px;
+  color: #FF2359;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.button:hover {
+  color: #FFFFFF!important;
+  background: #FF2359!important;
+}
+
+.button:active {
+  color: #FFFFFF !important;
+  background: #FF2359!important;
+}
+
+.space90 {
+  height: 20px;
+}

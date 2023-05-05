@@ -4,7 +4,7 @@ import Router from 'next/router'
 export const BannerComponent = () => {
   const findAMentorLink = 'https://docs.google.com/forms/d/e/1FAIpQLSe7Ha_UwLU7VPhn-XfKjwjOulaxgmT6v-XhyghcchNeDxm42A/viewform?fbclid=IwAR3LQ2LRrlXBRUzx46vdAPeDGBUR_T6yhgOVqN6olhzS1yt5NaG7gUUQWqc';
   return (
-    <section className={`container-fluid ${styles.banner}`}>
+    <div className={`container-fluid ${styles.banner}`}>
       <div className={`row h-100 justify-content-center align-items-center`}>
         <div className={`col-10 text-center mx-auto`}>
           <h2 className={styles.title}>Supercharge your career</h2>
@@ -15,6 +15,6 @@ export const BannerComponent = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }

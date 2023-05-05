@@ -53,7 +53,7 @@ const CardComponent = ({avatar, name, title, introduce, price}: IData) => {
 
 export const CoursesComponent = () => {
   return (
-    <section className={`container-fluid ${styles.background}`}>
+    <div className={`container-fluid ${styles.background}`}>
       <div className="row h-100">
         <div className={`d-flex flex-column align-items-center justify-content-center`}>
           <h3 className={styles.title}>Discover your personalized learning courses</h3>
@@ -74,6 +74,6 @@ export const CoursesComponent = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
