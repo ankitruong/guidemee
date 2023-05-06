@@ -2,20 +2,17 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './styles.module.css';
-import { useContext, useState } from 'react';
-import { LANGUAGE_ENUM, TranslateContext, languages } from '../../../contexts/translate';
+import { useState } from 'react';
+import { LANGUAGE_ENUM, useTranslateContext } from '../../../contexts/translate';
+import { RenderFlagLangquage } from '../common';
 
-const RenderFlagLangquage = ({ lang, onFlagClicked }: { lang: LANGUAGE_ENUM, onFlagClicked: (id: LANGUAGE_ENUM) => void }) => {
-  const currFlag = languages.find(i => i.id !== lang);
-  return currFlag 
-  ? <Image src={currFlag.icon} onClick={() => onFlagClicked(currFlag.id)} alt="" width={100} height={100} />
-  : null;
-}
+
 
 export const HeaderComponent = () => {
+  const { setLang, t, lang } = useTranslateContext();
+  
   const findAMentorLink = 'https://docs.google.com/forms/d/e/1FAIpQLSe7Ha_UwLU7VPhn-XfKjwjOulaxgmT6v-XhyghcchNeDxm42A/viewform?fbclid=IwAR3LQ2LRrlXBRUzx46vdAPeDGBUR_T6yhgOVqN6olhzS1yt5NaG7gUUQWqc';
-  const [currLang, setcurrLang] = useState<LANGUAGE_ENUM>(LANGUAGE_ENUM.VI);
-  // const currLang = useContext(TranslateContext)
+
   return (
     <header className={`container-fluid ${styles.containerHeader}`}>
       <div className={`row align-items-center ${styles.header}`}>
@@ -26,31 +23,33 @@ export const HeaderComponent = () => {
           <div className='d-flex justify-content-between align-items-center'>
             <div>
               <Link href="/#courses" className={styles.link} scroll={false}>
-                Courses
+                {t('Courses')}
               </Link>
             </div>
             <div>
               <Link href="/#carrer-path" className={styles.link} scroll={false}>
-                Career path
+                {t('Career path')}
               </Link>
             </div>
             <div>
               <Link href="/#hashid" className={styles.link} scroll={false}>
-                Hire talent
+                {t('Hire talent')}
               </Link>
             </div>
             <div>
               <Link href="/#findAMentor" className={styles.link} scroll={false}>
-                Find a mentor
+                {t('Find a mentor')}
               </Link>
             </div>
             <div>
               <Link href={findAMentorLink} className={styles.link} scroll={false}>
-                Become a mentor
+                {t('Become a mentor')}
               </Link>
             </div>
             <div className={styles.flag}>
-              <RenderFlagLangquage onFlagClicked={(id) => setcurrLang(id)} lang={currLang}/>
+              <RenderFlagLangquage onFlagClicked={(id) => {
+                setLang(id);
+              }} lang={lang}/>
             </div>
           </div>
         </div>

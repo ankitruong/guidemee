@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import { HeaderComponent } from '@/components/header/desktop'
+import { HeaderComponent as HeaderMobile } from '@/components/header/mobile'
 import { BannerComponent } from '../components/banner/desktop'
 import { BannerComponent as BannerMobile } from '../components/banner/mobile'
 import { TrademarkComponent } from '../components/trademark/desktop'
@@ -17,7 +18,6 @@ import { ConversationsComponent as ConversationsMobile } from '@/components/conv
 import { CoursesComponent } from '../components/courses/desktop'
 import { CoursesComponent as CoursesMobile } from '../components/courses/mobile'
 import { useEffect, useState } from 'react'
-import useWindowDimensions from '../hooks/useWindowDimensions'
 import { useMediaQuery } from 'react-responsive'
 const inter = Inter({ subsets: ['latin'] })
 
@@ -57,6 +57,7 @@ export default function Home() {
       {
         currView === 2 && (
           <div className={'mobile'}>
+            <HeaderMobile/>
             <BannerMobile/>
             <TrademarkMobile/>
             <FieldMobile/>
