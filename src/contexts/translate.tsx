@@ -31,7 +31,7 @@ export const TranslateContext = createContext<IContextTranslateProps>({
   t: (v) => v,
 });
 
-export const TranslateProvider = ({ children }) => {
+export const TranslateProvider = ({ children }: { children: any }) => {
   const [lang, setLang] = useState(LANGUAGE_ENUM.EN)
   const [data, setData] = useState(translates)
 
