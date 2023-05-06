@@ -19,6 +19,7 @@
 }
 
 .content {
+  text-align: justify;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;

@@ -38,11 +38,11 @@ export const PortfolioComponent = () => {
           return (
             <div id={i.id} key={idx} style={{backgroundColor:`${i.backgroundColor}`}} className={`container-fluid py-4`}>
               <div className="row">
-                <div className="col-12 mb-1">
+                <div className="col-12 mb-2">
                   <Image className='img img-fluid mx-auto' src={i.img} width={500} height={100} alt=''/>
                 </div>
                 <div className="col text-center">
-                  <h5 className={`${styles.title} mb-1`}>{t(i.title)}</h5>
+                  <h5 className={`${styles.title} my-2`}>{t(i.title)}</h5>
                   <p className={`${styles.content} mb-1`}>{t(i.content)}</p>
                 </div>
               </div>
