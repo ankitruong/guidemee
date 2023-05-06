@@ -16,32 +16,58 @@ import { ConversationsComponent } from '@/components/conversations/desktop'
 import { ConversationsComponent as ConversationsMobile } from '@/components/conversations/mobile'
 import { CoursesComponent } from '../components/courses/desktop'
 import { CoursesComponent as CoursesMobile } from '../components/courses/mobile'
+import { useEffect, useState } from 'react'
+import useWindowDimensions from '../hooks/useWindowDimensions'
+import { useMediaQuery } from 'react-responsive'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const isNotMobile = useMediaQuery({ minWidth: 768 })
+  const isMobile = useMediaQuery({ maxWidth: 767 })
+  const [currView, setcurrView] = useState<number>(0);
+  useEffect(() => {
+    if(isNotMobile) {
+      setcurrView(1);
+    }
+  }, [isNotMobile])
+ 
+  useEffect(() => {
+    if(isMobile) {
+      setcurrView(2);
+    }
+  }, [isMobile])
+
   return (
     <section className={inter.className}>
-      <div className={'desktop'}>
-        <HeaderComponent/>
-        <BannerComponent/>
-        <TrademarkComponent/>
-        <FieldComponent/>
-        <PortfolioComponent/>
-        <CoursesComponent/>
-        <MentorsComponent/>
-        <ConversationsComponent/>
-        <FooterComponent/>
-      </div>
-      <div className={'mobile'}>
-        <BannerMobile/>
-        <TrademarkMobile/>
-        <FieldMobile/>
-        <PortfolioMobile/>
-        <CoursesMobile/>
-        <MentorsMobile/>
-        <ConversationsMobile/>
-        <FooterMobile/>
-      </div>
+      {
+        [0,1].includes(currView) && (
+          <div className={'desktop'}>
+            <HeaderComponent/>
+            <BannerComponent/>
+            <TrademarkComponent/>
+            <FieldComponent/>
+            <PortfolioComponent/>
+            <CoursesComponent/>
+            <MentorsComponent/>
+            <ConversationsComponent/>
+            <FooterComponent/>
+          </div>
+        )
+      }
+      {
+        currView === 2 && (
+          <div className={'mobile'}>
+            <BannerMobile/>
+            <TrademarkMobile/>
+            <FieldMobile/>
+            <PortfolioMobile/>
+            <CoursesMobile/>
+            <MentorsMobile/>
+            <ConversationsMobile/>
+            <FooterMobile/>
+          </div>
+        )
+      }
     </section>
   )
 }
