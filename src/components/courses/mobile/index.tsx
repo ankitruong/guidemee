@@ -1,3 +1,4 @@
+import { useTranslateContext } from '../../../contexts/translate';
 import styles from './styles.module.css'; 
 const data = [
   {
@@ -53,17 +54,31 @@ const CardComponent = ({avatar, name, title, introduce, price}: IData) => {
 }
 
 export const CoursesComponent = () => {
+  const {t} = useTranslateContext()
+
   return (
     <div className={`container-fluid ${styles.background} py-4`}>
       <div className="row h-100">
         <div className={`d-flex flex-column align-items-center justify-content-center`}>
-          <h3 className={styles.title}>Discover your personalized learning courses</h3>
-          <h5 className={styles.description}>Tailor courses to your unique needs with the most robust customisation tools in the market</h5>
+          <h3 className={styles.title}>
+            {t('Discover your personalized learning courses')}
+          </h3>
+          <h5 className={styles.description}>
+            {t('Tailor courses to your unique needs with the most robust customisation tools in the market')}
+          </h5>
           <div className={`d-flex justify-content-center ${styles.flexGap}`}>
-            <button type="button" className={`btn ${styles.button}`}>Design</button>
-            <button type="button" className={`btn ${styles.button}`}>Popular</button>
-            <button type="button" className={`btn ${styles.button}`}>Marketing</button>
-            <button type="button" className={`btn ${styles.button}`}>Development</button>
+            <button type="button" className={`btn ${styles.button}`}>
+              {t('Design')}
+            </button>
+            <button type="button" className={`btn ${styles.button}`}>
+              {t('Popular')}
+            </button>
+            <button type="button" className={`btn ${styles.button}`}>
+              {t('Marketing')}
+            </button>
+            <button type="button" className={`btn ${styles.button}`}>
+              {t('Development')}
+            </button>
           </div>
           <div className={styles.space90} />
           <div className={`d-flex justify-content-center ${styles.flexGap}`}>

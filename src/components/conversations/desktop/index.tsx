@@ -1,3 +1,4 @@
+import { useTranslateContext } from '../../../contexts/translate';
 import styles from './styles.module.css'; 
 const mentees = [
   {
@@ -21,11 +22,13 @@ const mentees = [
 ];
 
 export const ConversationsComponent = () => {
+  const { t } = useTranslateContext();
+
   return (
     <div className={`container-fluid ${styles.background}`}>
       <div className="row h-100">
         <div className={`d-flex flex-column align-items-center justify-content-center`}>
-          <h3 className={styles.title}>What our members are saying</h3>
+          <h3 className={styles.title}>{t('What our members are saying')}</h3>
           <div className={`row align-items-center justify-content-center ${styles.flexGap}`}>
             {
               mentees.map((mentee,idx) =>{
@@ -47,7 +50,7 @@ export const ConversationsComponent = () => {
             }
           </div>
           <div>
-            <button type="button" className={`btn ${styles.button}`}>Find a Mentor</button>
+            <button type="button" className={`btn ${styles.button}`}>{t('Find a mentor')}</button>
           </div>
         </div>
       </div>

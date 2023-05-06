@@ -1,7 +1,10 @@
+import { useTranslateContext } from '../../../contexts/translate';
 import styles from './styles.module.css';
 import Image from 'next/image';
 
 export const FooterComponent = () => {
+  const {t} = useTranslateContext()
+
   return (
     <footer className={`container-fluid ${styles.background} py-4`}>
       <div className="row align-items-center justify-content-center">
@@ -15,7 +18,7 @@ export const FooterComponent = () => {
               </div>
               <div className="row mb-2">
                 <div className="col">
-                Guidemee is a mentorship and expert platform that helps you accelerate your career in various fields.
+                {t('Guidemee is a mentorship and expert platform that helps you accelerate your career in various fields.')}
                 </div>
               </div>
               <div className="row">
@@ -28,28 +31,28 @@ export const FooterComponent = () => {
             <div className={`col-12 ${styles.right}`}>
               <div className="row">
                 <div className="col-6">
-                  <p>Mentee</p>
-                  <p>Courses</p>
-                  <p>Career path</p>
-                  <p>Find a mentor</p>
+                  <p>{t('Mentee')}</p>
+                  <p>{t('Courses')}</p>
+                  <p>{t('Career path')}</p>
+                  <p>{t('Find a mentor')}</p>
                 </div>
                 <div className="col-6">
-                  <p>Mentor</p>
-                  <p>Hire talent</p>
-                  <p>Become a mentor</p>
+                  <p>{t('Mentor')}</p>
+                  <p>{t('Hire talent')}</p>
+                  <p>{t('Become a mentor')}</p>
                 </div>
                 <div className={styles.space10}></div>
                 <div className="col-6">
-                  <p>Company</p>
-                  <p>About us</p>
-                  <p>Help center</p>
-                  <p>Partnerships</p>
-                  <p>FAQ</p>
+                  <p>{t('Company')}</p>
+                  <p>{t('About us')}</p>
+                  <p>{t('Help center')}</p>
+                  <p>{t('Partnerships')}</p>
+                  <p>{t('FAQ')}</p>
                 </div>
                 <div className="col-6">
-                  <p>Legal</p>
-                  <p>Terms of service</p>
-                  <p>Privacy policy</p>
+                  <p>{t('Legal')}</p>
+                  <p>{t('Terms of service')}</p>
+                  <p>{t('Privacy policy')}</p>
                 </div>
               </div>
             </div>

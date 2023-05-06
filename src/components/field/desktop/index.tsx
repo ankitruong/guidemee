@@ -1,3 +1,4 @@
+import { useTranslateContext } from '../../../contexts/translate';
 import styles from './styles.module.css'; 
 
 const data1 = [
@@ -21,11 +22,14 @@ const data3 = [
   'Others',
 ]
 export const FieldComponent = () => {
+  const { t } = useTranslateContext();
   return (
     <div id="courses" className={`container-fluid ${styles.background}`}>
       <div className={`row h-100 justify-content-center align-items-center`}>
         <div className={`col-12 text-center mx-auto`}>
-          <h2 className={styles.title}>Find a mentor in your field</h2>
+          <h2 className={styles.title}>
+            {t('Find a mentor in your field')}
+          </h2>
           <div className={`d-flex justify-content-center mb-2 ${styles.flexGap}`}>
             {
               data1.map((i, index) => {
@@ -33,7 +37,7 @@ export const FieldComponent = () => {
                   <div className={`${styles.flexGap}`} key={index + i}>
                     <button type="button" className={`btn bg-white ${styles.button}`}>
                       <p>
-                        {i}
+                        {t(i)}
                       </p>
                     </button>
                   </div>
@@ -48,7 +52,7 @@ export const FieldComponent = () => {
                   <div className={`${styles.flexGap}`} key={index + i}>
                     <button type="button" className={`btn bg-white ${styles.button}`}>
                       <p>
-                        {i}
+                        {t(i)}
                       </p>
                     </button>
                   </div>
@@ -63,7 +67,7 @@ export const FieldComponent = () => {
                   <div className={`${styles.flexGap}`} key={index + i}>
                     <button type="button" className={`btn bg-white ${styles.button}`}>
                       <p>
-                        {i}
+                        {t(i)}
                       </p>
                     </button>
                   </div>

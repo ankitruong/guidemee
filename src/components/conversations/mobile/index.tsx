@@ -1,3 +1,4 @@
+import { useTranslateContext } from '../../../contexts/translate';
 import styles from './styles.module.css'; 
 const mentees = [
   {
@@ -21,11 +22,13 @@ const mentees = [
 ];
 
 export const ConversationsComponent = () => {
+  const {t} = useTranslateContext()
+
   return (
     <div className={`container-fluid ${styles.background} py-4`}>
       <div className="row h-100">
         <div className={`d-flex flex-column align-items-center justify-content-center`}>
-          <h3 className={styles.title}>What our members are saying</h3>
+          <h3 className={styles.title}>{t('What our members are saying')}</h3>
           <div className={`row align-items-center justify-content-center ${styles.flexGap} py-3`}>
             {
               mentees.map((mentee,idx) =>{
@@ -36,9 +39,9 @@ export const ConversationsComponent = () => {
                         <img className='img img-fluid rounded-circle' src={mentee.avatar} alt=""/>
                       </div>
                       <div className="col-9 my-3">
-                        <p className={styles.introduce}>{mentee.introduce}</p>
-                        <p className={styles.name}>{mentee.name}</p>
-                        <p className={styles.role}>{mentee.role}</p>
+                        <p className={styles.introduce}>{t(mentee.introduce)}</p>
+                        <p className={styles.name}>{t(mentee.name)}</p>
+                        <p className={styles.role}>{t(mentee.role)}</p>
                       </div>
                     </div>
                   </div>

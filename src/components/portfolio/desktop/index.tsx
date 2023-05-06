@@ -1,3 +1,4 @@
+import { useTranslateContext } from '../../../contexts/translate';
 import styles from './styles.module.css'; 
 
 const data = [
@@ -28,6 +29,8 @@ const data = [
 ];
 
 export const PortfolioComponent = () => {
+  const { t } = useTranslateContext();
+
   return (
     <>
       {
@@ -39,8 +42,8 @@ export const PortfolioComponent = () => {
                     <img className='img img-fluid' src={i.img} alt=""/>
                 </div>
                 <div className={`col-5 d-flex flex-column align-items-center justify-content-center`}>
-                  <h3 className={`${styles.title}`}>{i.title}</h3>
-                  <p className={`${styles.content}`}>{i.content}</p>
+                  <h3 className={`${styles.title}`}>{t(i.title)}</h3>
+                  <p className={`${styles.content}`}>{t(i.content)}</p>
                 </div>
               </div>
             </div>

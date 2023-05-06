@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
+import { useTranslateContext } from '../../../contexts/translate';
 
 const TOTAL_STAR = 5;
 
@@ -64,11 +65,13 @@ function starComponent(star: number) {
 };
 
 export const MentorsComponent = () => {
+  const { t } = useTranslateContext();
+
   return (
     <div id="findAMentor" className={`container-fluid ${styles.background}`}>
       <div className="row h-100">
         <div className={`d-flex flex-column align-items-center justify-content-center`}>
-          <h3 className={styles.title}>Meet our mentors</h3>
+          <h3 className={styles.title}>{t('Meet our mentors')}</h3>
           <div className={`row align-items-center justify-content-center ${styles.flexGap}`}>
             {
               mentors.map((mentor,idx)=>{
@@ -76,8 +79,8 @@ export const MentorsComponent = () => {
                   <div key={idx} className={`card ${styles.box}`}>
                     <img src={mentor.avatar} className="card-img-top" alt="" />
                     <div className="card-body">
-                      <h5 className={`card-title ${styles.name}`}>{mentor.name}</h5>
-                      <p className={`card-title ${styles.description}`}>{mentor.description}</p>
+                      <h5 className={`card-title ${styles.name}`}>{t(mentor.name)}</h5>
+                      <p className={`card-title ${styles.description}`}>{t(mentor.description)}</p>
                       <div>
                         {...starComponent(mentor.starNumber)}
                         <span className={styles.starNumber}>

@@ -1,3 +1,4 @@
+import { useTranslateContext } from '../../../contexts/translate';
 import styles from './styles.module.css'; 
 import Image from 'next/image';
 const data = [
@@ -28,6 +29,8 @@ const data = [
 ];
 
 export const PortfolioComponent = () => {
+  const {t} = useTranslateContext()
+
   return (
     <>
       {
@@ -39,8 +42,8 @@ export const PortfolioComponent = () => {
                   <Image className='img img-fluid mx-auto' src={i.img} width={500} height={100} alt=''/>
                 </div>
                 <div className="col text-center">
-                  <h5 className={`${styles.title} mb-1`}>{i.title}</h5>
-                  <p className={`${styles.content} mb-1`}>{i.content}</p>
+                  <h5 className={`${styles.title} mb-1`}>{t(i.title)}</h5>
+                  <p className={`${styles.content} mb-1`}>{t(i.content)}</p>
                 </div>
               </div>
             </div>
